@@ -1,0 +1,22 @@
+<md-button class="md-fab md-primary md-fab-top-right" ng-click="logout()" aria-label="Use Android">
+<i class="fa fa-power-off" aria-hidden="true"></i>
+</md-button>
+
+<div ng-controller="dashboardController" ng-cloak>
+	<md-content class="md-padding">
+		<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+			<md-nav-item md-nav-click="goto()" name="Chat">
+				Chat
+			</md-nav-item>
+			<md-nav-item md-nav-click="goto2()" name="configuracion">
+				Configuracion
+			</md-nav-item>
+
+		</md-nav-bar>
+		<div class="ext-content"></div>
+		</div>
+		</md-content>
+		</div>
+		<div>
+			hola {{mensaje}}
+		</div>

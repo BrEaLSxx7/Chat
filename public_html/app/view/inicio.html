@@ -1,0 +1,109 @@
+<div ng-controller="indexController" ng-cloak>
+	<md-content class="md-padding">
+		<md-nav-bar  md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+			<md-nav-item md-nav-click="goto()" name="login">
+				Iniciar secion
+			</md-nav-item>
+			<md-nav-item md-nav-click="goto2()" name="registro">
+				Registro
+			</md-nav-item>
+
+		</md-nav-bar>
+		<div class="ext-content">
+			<span>
+			<div ng-show="logi" class="jumbotron container col-lg-6">
+				<div class="md-padding" ng-cloak layout="column">
+					<form ng-submit="login()">
+						<md-card>
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">5CHAT</span>
+									<span class="md-subhead">Iniciar secion</span>
+								</md-card-title-text>
+							</md-card-title>
+							<md-card-content>
+
+								<div layout="column" class="col-lg-5">
+									<md-input-container>
+										<label>Email</label>
+										<input type="email" required ng-model="data.email">
+									</md-input-container>
+								</div>
+							</md-card-content>
+							<md-card-content>
+								<div layout="column" class="col-lg-5">
+									<md-input-container>
+										<label>Password</label>
+										<input type="password" required ng-model="data.pass">
+									</md-input-container>
+								</div>
+							</md-card-content>
+
+						</md-card>
+						<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+							<md-button type="submit" class="md-raised md-primary">Iniciar</md-button>
+						</section>
+					</form>
+				</div>
+			</div>
+
+		</span>
+		<span>
+			<div ng-show="regiter" class="jumbotron container col-lg-6">
+				<div class="md-padding" ng-cloak layout="column">
+					<form ng-submit="register()">
+						<md-card>
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">5CHAT</span>
+									<span class="md-subhead">registro</span>
+								</md-card-title-text>
+							</md-card-title>
+							<md-card-content>
+
+								<div layout="column" class="col-lg-5">
+									<md-input-container>
+										<label>Email</label>
+										<input type="email" required ng-model="reg.email">
+									</md-input-container>
+								</div>
+							</md-card-content>
+							<md-card-content>
+								<div layout="column" class="col-lg-5">
+									<md-input-container>
+										<label>Password</label>
+										<input type="password" required ng-keydown="passw" ng-model="reg.pass">
+									</md-input-container>
+								</div>
+								<div layout="column" class="col-lg-5">
+									<md-input-container>
+										<label>Password</label>
+										<input type="password" ng-keyup="conf" required ng-model="confpass">
+									</md-input-container>
+								</div>
+								<div layout="column" class="col-lg-5">
+									<md-input-container>
+										<label>Nombre completo</label>
+										<input type="name" required ng-model="reg.name">
+									</md-input-container>
+								</div>
+								<div layout="column" class="col-lg-5">
+									<md-input-container>
+										<label>nickname</label>
+										<input type="text" required ng-model="reg.apodo">
+									</md-input-container>
+								</div>
+							</md-card-content>
+
+						</md-card>
+						<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+							<md-button type="submit" class="md-raised md-primary">registrarse</md-button>
+						</section>
+					</form>
+				</div>
+			</div>
+		</span>
+		</div>
+</div>
+</md-content>
+</div>
